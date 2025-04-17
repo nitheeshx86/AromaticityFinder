@@ -10,7 +10,7 @@ st.markdown("Draw a molecule below and find out whether it is **aromatic**, **an
 # Molecule drawing canvas
 smiles = st_ketcher()
 if smiles:
-    st.markdown("### 🔬 SMILES Representation:")
+    st.markdown("🔬 SMILES Representation:")
     st.code(smiles)
 
     try:
