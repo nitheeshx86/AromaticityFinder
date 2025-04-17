@@ -24,15 +24,15 @@ if smiles:
             num_aromatic_rings = len(aromatic_rings)
 
             if num_aromatic_rings > 0:
-                st.success("This molecule is **aromatic** 🌟")
+                st.success("# This molecule is **aromatic** 🌟")
             else:
                 # Check if it's cyclic
                 ri = mol.GetRingInfo()
                 if ri.NumRings() > 0:
-                    st.warning("This molecule is **anti-aromatic** ⚠️ ")
+                    st.warning("# This molecule is **anti-aromatic** ⚠️ ")
                 else:
-                    st.info("This molecule is **non-aromatic** 🧊 ")
+                    st.info("# This molecule is **non-aromatic** 🧊 ")
     except Exception as e:
         st.error(f"Something went wrong: {e}")
 else:
-    st.info("👈 Use the editor above to draw a molecule.")
+    st.info("Use the editor above to draw a molecule.")
